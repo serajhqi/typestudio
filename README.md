@@ -1,35 +1,66 @@
-# React + TypeScript + Vite
+# 🖋️ TypeStudio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> A modern, sleek local typography previewer and font playground built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+TypeStudio lets you preview, test, and compare your local font collections side-by-side in real time by simply dropping font files into a folder.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **📂 Drop-in Font Loading**: Simply put `.ttf`, `.otf`, `.woff`, or `.woff2` files into `src/fonts/` — they are auto-detected via Vite's dynamic glob import.
+- **✨ Full-Width Row Previews**: Compare every font side-by-side in stacked, full-width cards.
+- **⚡ Live Interactive Studio Bar**: Sticky control panel with real-time text input, quick clear, and sample presets (English pangrams, Persian/Arabic text, etc.).
+- **🎚️ Live Size Slider**: Adjust preview font sizes from 16px to 72px instantaneously.
+- **📋 One-Click Copy**: Easily copy font names to clipboard for use in your CSS or design tools.
+- **🔒 Privacy & Git Friendly**: The `src/fonts/` folder is tracked via `.gitkeep`, while actual proprietary or private font files are automatically ignored in `.gitignore`.
+- **🌙 Glassmorphic Dark UI**: Ambient glow and modern dark studio design.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### 1. Install Dependencies
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+pnpm install
+# or npm install / yarn
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Add Your Fonts
+
+Place any font files you want to preview into the `src/fonts/` directory:
+
+```text
+src/
+└── fonts/
+    ├── .gitkeep
+    ├── MyCustomFont.ttf
+    ├── AnotherFont.otf
+    └── WebFont.woff2
+```
+
+### 3. Start the Dev Server
+
+```bash
+pnpm dev
+# or npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React 19](https://react.dev/)
+- **Bundler**: [Vite](https://vite.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Linter**: [Oxlint](https://oxc.rs/)
+
+---
+
+## 📄 License
+
+MIT
+
